@@ -1,6 +1,6 @@
 function suma() {
 
-	var n = parseInt(prompt("Unesi broj i sracunaj:"));
+	var n = prompt("Unesi broj i sracunaj:");
 
 	if (n < 0 || isNaN(n)) {
 		return document.getElementById("one").innerHTML = "Mora biti pozitivan broj";
@@ -16,7 +16,7 @@ function suma() {
 
 function faktorijel() {
 
-	var m = parseInt(prompt("Unesi broj i sracunaj:"));
+	var m = prompt("Unesi broj i sracunaj:");
 
 	if (m <= 0 || isNaN(m)) {
 		return document.getElementById("two").innerHTML = "Mora biti prirodan broj";
@@ -33,8 +33,8 @@ function faktorijel() {
 
 function bilans() {
 
-	var stanje = parseInt(prompt("Koliko imas para:"));
-	var cena = parseInt(prompt("Koliko kosta tvoj zeljeni predmet:"));
+	var stanje = prompt("Koliko imas para:");
+	var cena = prompt("Koliko kosta tvoj zeljeni predmet:");
 
 	if(stanje <= 0 || cena <= 0) {
 		return document.getElementById("tree").innerHTML = "Nema pas za sta da te ujede.";
@@ -53,15 +53,15 @@ function bilans() {
 
 function zbirCelih() {
 
-	var n = parseInt(prompt("Zelim da saberem sve od:"));
-	var k = parseInt(prompt("Do:"));
+	var n = Number(prompt("Zelim da saberem sve od:"));
+	var k = Number(prompt("Do:"));
 
 	var zbir = 0;
 
 	if (n < k) {
 
 		for ( var i = n; i <= k; i++){
-			parseInt(zbir+=i);
+			zbir+=i;
 		}
 		return document.getElementById("four").innerHTML = "Rezultat je " + zbir;
 	}
